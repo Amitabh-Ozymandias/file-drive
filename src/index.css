@@ -1,0 +1,91 @@
+/* Import theme variables */
+@import './styles/themes.css';
+
+/* Reset some browser defaults */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  min-height: 100vh;
+}
+
+a {
+  text-decoration: none;
+  color: var(--accent);
+}
+
+button {
+  font-family: inherit;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+}
+
+input[type="email"],
+input[type="password"],
+input[type="file"],
+button,
+textarea {
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+/* Smooth transition for the app */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Main content area should grow */
+main {
+  flex-grow: 1;
+  padding: 1.5rem;
+}
+
+/* Utility classes */
+.centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Image preview styling */
+img.preview {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 8px;
+  margin-top: 1rem;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+/* Form container styling */
+.form-container {
+  background-color: var(--card-bg);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+  max-width: 500px;
+  margin: 4rem auto;
+}
+
+/* Headings */
+h1, h2, h3 {
+  color: var(--text);
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
